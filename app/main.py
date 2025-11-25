@@ -2,10 +2,10 @@ from flask import Flask,Blueprint,render_template
 
 main = Blueprint('main', __name__)
 
-@main.route('/')
+@main.route('/index')
 def home():
-    return "Hello World!"
+    return render_template('index.html')
 
 @main.route('/profile')
 def profile():
-    return "Profile of the user" 
+    return render_template('profile.html') 
